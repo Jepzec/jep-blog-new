@@ -33,11 +33,7 @@ const blogPosts = [
   },
 ];
 
-export default function BlogPost({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default function BlogPost({ params }: { params: { id: string } }) {
   const post = blogPosts.find((post) => post.id === params.id);
 
   if (!post) {
