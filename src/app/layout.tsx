@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
 import "@/app/globals.css";
+import FooterPage from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,13 +28,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="container mx-auto flex-grow  ">{children}</main>
-        <footer className="bg-white border-t border-gray-200 py-4 sm:py-6">
-          <div className="container mx-auto px-4 text-center text-gray-500 text-sm sm:text-base">
-            <p>
-              © {new Date().getFullYear()} Jepzec Auto-car. All rights reserved.
-            </p>
-          </div>
-        </footer>
+        <FooterPage />
       </body>
     </html>
   );
